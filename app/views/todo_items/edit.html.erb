@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @todo_item %> |
-<%= link_to 'Back', todo_items_path %>
+<%= link_to 'Show', [@todo_list, @todo_item] %>  <!-- I think this calls todo_items/show.html.erb, which needs these two variables (usually set in controller) -->
+<%= link_to 'Back', @todo_list %> <!-- We link to this page from todo_lists/show.html.erb, so we want to return to todo_lists/show.  Not sure how back correlates to show.  Maybe its automatic?-->
